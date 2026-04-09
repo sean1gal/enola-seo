@@ -14,6 +14,8 @@ Built for local businesses tired of losing to worse competitors on Google.
 
 [Quick Start](#quick-start) · [26 Audits](#the-26-audits) · [Slash Commands](#slash-commands) · [Who It's For](#who-this-is-for) · [Contributing](CONTRIBUTING.md)
 
+**[→ Landing page + full guide](https://build.enolarevenu.com/enola-seo)**
+
 </div>
 
 ---
