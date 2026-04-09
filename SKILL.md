@@ -64,6 +64,23 @@ On activation — check for `BUSINESS_CONTEXT.md` first.
 
 ---
 
+## MODE SELECTION
+
+Before intake — ask once, save to context, never ask again:
+
+> "How do you want to run this?
+> 1. Browser only — no setup, works right now (best for most people)
+> 2. API enhanced — richer data from Google Search Console + PageSpeed (best for agencies or power users — requires API keys)
+> 3. Tell me your setup"
+
+Save as `mode: browser` or `mode: api` in BUSINESS_CONTEXT.md.
+
+**If mode: api** — load `references/api-mode.md` before intake begins. Confirm which keys are set before proceeding. If a key is missing, tell the user which audits will fall back to browser mode for that data point.
+
+**If mode: browser** — proceed to intake as normal. All data comes from live browsing.
+
+---
+
 ## PHASE 1 — INTAKE
 
 Introduce first:
@@ -91,17 +108,44 @@ Then present what was found:
 
 Show as a clean list. Wait for corrections.
 
-Then ask only for what's missing — in this order, skip anything already found:
-```
-GBP URL? (if not found on site — or: give me your business name + city, I'll find it)
-Top 1–3 competitors? (name + city is enough)
-Google reviews — total, star rating, new per month?
-Biggest SEO problem — one honest sentence.
-Monthly revenue target from Google? (optional)
-```
+Then ask only for what's missing — one block, numbered, skipping anything already found:
 
-B2C vs B2B: infer from the website where possible. If unclear, ask:
-> "Are you B2C local (one city, consumers, on-demand) or B2B / multi-location?"
+> "A few quick questions — answer with the number or type your own:
+>
+> **GBP:** Where's your Google Business Profile?
+> 1. Find it for me (I'll search Google Maps)
+> 2. Here's the URL: [paste]
+> 3. I don't have one yet
+>
+> **Competitors:** Who are your top competitors?
+> 1. Find the top 3 for me in Google Maps
+> 2. I'll name them: [names + city]
+> 3. I know one: [name one, find the rest]
+>
+> **Reviews:** Your Google review situation?
+> 1. Under 25 reviews
+> 2. 25–100 reviews
+> 3. Over 100 reviews
+> 4. My exact numbers: [total] reviews, [X] stars, [n]/month new
+>
+> **Biggest problem:** What's not working?
+> 1. Not showing up in Google Maps / local search
+> 2. Getting traffic but not enough calls or leads
+> 3. Competitors outranking me on specific searches
+> 4. In my own words: [describe it]
+>
+> **Revenue target from Google:** (optional — skip if you prefer)
+> 1. Skip
+> 2. Under $5K/month
+> 3. $5K–$20K/month
+> 4. Over $20K/month
+> 5. My number: [type it]"
+
+B2C vs B2B: infer from the website where possible. If unclear, add to the block:
+
+> **Business model:**
+> 1. B2C local — one city, consumers, on-demand (plumber, cleaner, roofer)
+> 2. B2B / multi-location — commercial clients or multiple cities
 
 Save answer to context as `model: b2c-local` or `model: b2b-multi`.
 
@@ -110,40 +154,55 @@ Save answer to context as `model: b2c-local` or `model: b2b-multi`.
 ### PATH B — No website
 
 Say:
-> "No website yet. We'll build from scratch. Let's get your business down first."
+> "No website yet — we'll build from scratch. Answer with the number or type your own:
+>
+> **Business name:** [type it]
+>
+> **Primary service:**
+> 1. Plumbing
+> 2. HVAC / heating & cooling
+> 3. Electrical
+> 4. Roofing
+> 5. Cleaning / housekeeping
+> 6. Landscaping / lawn care
+> 7. Legal services
+> 8. Dental / medical
+> 9. Something else: [type it]
+>
+> **City you serve:** [type it]
+>
+> **Other services:** (optional)
+> 1. Skip
+> 2. List them: [type]
+>
+> **GBP:** Do you have a Google Business Profile?
+> 1. Yes — find it for me (I'll search Google Maps)
+> 2. Yes — here's the URL: [paste]
+> 3. No — I don't have one yet
+>
+> **Reviews:**
+> 1. Under 25 reviews
+> 2. 25–100 reviews
+> 3. Over 100 reviews
+> 4. No reviews yet
+> 5. My exact numbers: [total], [X] stars, [n]/month
+>
+> **Competitors:**
+> 1. Find the top 3 for me in Google Maps
+> 2. I'll name them: [names + city]
+> 3. I keep losing jobs to: [name one]
+>
+> **Business model:**
+> 1. B2C local — one city, consumers, on-demand
+> 2. B2B / multi-location — commercial clients or multiple cities
+>
+> **Biggest problem:**
+> 1. Not showing up in Google Maps at all
+> 2. Showing up but not getting calls
+> 3. Losing to competitors I know are worse
+> 4. In my own words: [describe it]"
 
-Run full intake — one section at a time. Wait for answers after each.
-
-**Section 1 — The Basics**
-```
-Business name?
-Full address?
-Phone?
-Google Business Profile URL? (if unknown: give me business name + city, I'll find it)
-Primary service?
-Other services?
-Cities you serve?
-Years operating? (optional)
-```
-
-**Section 2 — The Numbers**
-```
-Google reviews — total, star rating, new per month?
-Where do you show in Maps right now?
-Monthly revenue target from Google? (optional)
-Biggest SEO problem — one honest sentence.
-```
-
-**Section 3 — Competition**
-```
-Top 1–3 competitors? (name + city is enough)
-Anyone you keep losing jobs to?
-```
 If no competitors named: search Google Maps for [primary service] + [city]. Take top 3. State this before proceeding.
-
-**Section 4 — Business model**
-> "B2C local (one city, consumers, on-demand) or B2B / multi-location?"
-Save as `model: b2c-local` or `model: b2b-multi`.
 
 At diagnosis: recommend audit 11 (City Page Builder) as their first web presence. Their /seo-audit/ output becomes the build brief.
 
@@ -261,22 +320,28 @@ DIAGNOSIS — [Business Name]
 ─────────────────────────────
 Model: [B2C Local / B2B Multi-Location]
 
-BLEEDING NOW (fix this week):
+BLEEDING NOW (fix today):
 → [specific gap #1]
 → [specific gap #2]
 → [specific gap #3]
 
-LOSING MONEY SLOWLY (fix this month):
+LOSING MONEY SLOWLY (fix this week):
 → [gap]
 → [gap]
 
-COMPOUNDING PROBLEMS (fix this quarter):
+COMPOUNDING PROBLEMS (fix this month):
 → [gap]
 
 RECOMMENDED START: Audits [##, ##, ##]
+TIME: approximately [X] hours to run all three
 REASON: [one sentence why these three first]
 ─────────────────────────────
-Full menu below. Say "run recommended" or pick by number.
+How do you want to proceed?
+1. Run recommended (fastest path — done today)
+2. Run all 26 audits
+3. Run a section: GBP / Website / Authority / Content / Advanced
+4. Pick by number: [e.g., 1, 3, 7]
+5. Just show me the menu
 ```
 
 Save to seo-audit/DIAGNOSIS.md.
@@ -365,21 +430,26 @@ After all selected audits:
 Plan format:
 
 ```
-12-WEEK EXECUTION PLAN — [Business Name]
+EXECUTION PLAN — [Business Name]
 Generated from: [list audits run]
 ─────────────────────────────────────────
-WEEK 1–2   Fix the bleeding. [specific actions from audit findings]
-WEEK 3–4   GBP fully locked. [specific actions]
-WEEK 5–6   Website fixed.   [specific actions]
-WEEK 7–8   Authority up.    [specific actions]
-WEEK 9–10  Content live.    [specific actions]
-WEEK 11–12 Measure. Double down on what moved.
+TODAY (2–4 hours)
+  [Specific actions from audit findings — things that take minutes to implement]
+  e.g. Add 3 GBP categories. Fix phone button size. Submit sitemap.
+
+WEEK 1    [specific actions — harder fixes, copy to write]
+WEEK 2    GBP fully locked. [specific actions]
+WEEK 3–4  Website fixed.   [specific actions]
+WEEK 5–6  Authority up.    [specific actions]
+WEEK 7–8  Content live.    [specific actions]
+WEEK 9–12 Measure. Double down on what moved.
 ─────────────────────────────────────────
 EXPECTED OUTCOME: [specific — "ranking for X in Y weeks" based on findings]
 ```
 
 Close with:
 > "Everything is in /seo-audit/.
+> The TODAY section is doable in the next few hours — start there.
 > Run this again in 90 days. Compare the numbers.
 > By then you'll know if you executed or if you just read it."
 

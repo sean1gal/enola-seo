@@ -48,15 +48,35 @@ cp -r enola-seo/ ~/.claude/skills/
 run my SEO audit
 ```
 
+### Choose your mode
+
+First thing Enola asks — answer once, remembered forever:
+
+> "How do you want to run this?
+> 1. Browser only — no setup, works right now
+> 2. API enhanced — richer data from Google Search Console + PageSpeed"
+
+| | Browser Mode | API Enhanced |
+|--|:---:|:---:|
+| Works immediately | ✅ | Setup required (~10 min) |
+| No API keys needed | ✅ | ❌ |
+| Real traffic + ranking data | ❌ | ✅ |
+| Real Core Web Vitals (field data) | ❌ | ✅ |
+| Best for | Individuals, small businesses | Agencies, power users |
+
+API setup guide: [`references/api-mode.md`](references/api-mode.md)
+
 ### First session
 
-Enola asks you three questions:
+Every question has numbered answers. Answer with 1, 2, 3 — or type your own:
 
 > "Do you have a website for your business?"
 
 - **Yes** → Browses it, extracts everything, asks only for what's missing
-- **No website yet** → Full interview, then builds your first pages for you
+- **No website yet** → Numbered intake, then builds your first pages for you
 - **No business idea yet** → Runs market research first, finds the gap, then starts
+
+**Total intake time: under 5 minutes.** Everything after that is audits and output.
 
 ### Second session and beyond
 
@@ -65,6 +85,10 @@ run my SEO audit
 ```
 
 Enola loads your saved context. No re-interviewing. Jump straight to the audits.
+
+### Done today
+
+The recommended audits run in 2–4 hours. Every output includes a **TODAY** section — specific actions you can take in the next few hours, before you close the laptop.
 
 ---
 
