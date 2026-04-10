@@ -22,9 +22,11 @@ Built for local businesses tired of losing to worse competitors on Google.
 
 ## What This Is
 
-ENOLA SEO is a free Claude Code skill that turns Claude into a full local SEO auditor.
+ENOLA SEO is a free Claude Code skill that turns Claude into a full SEO auditor — for any business type.
 
-Tell it your website. It browses your real Google Business Profile, pulls your competitors' data, diagnoses every gap, and runs the audits you choose. Everything it produces — copy, templates, action plans — gets saved to organized files on your machine.
+Tell it your website. It interviews you to understand your business, browses your real listings and competitors, diagnoses every gap, and runs the audits that apply to your situation. Local service business, SaaS, B2B, e-commerce — the system routes itself.
+
+Everything it produces — copy, templates, action plans — gets saved to organized files on your machine.
 
 No API keys. No subscriptions. No generic advice. Just real competitive intelligence and paste-ready output.
 
