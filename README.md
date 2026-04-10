@@ -32,15 +32,34 @@ No API keys. No subscriptions. No generic advice. Just real competitive intellig
 
 ## Quick Start
 
-**Requirements:** [Claude Code](https://claude.ai/download) with browser access (default).
+Three ways to install — pick the one that fits your setup.
 
-### One-line install
+### Option A — MCP Plugin (Claude Desktop, OpenClaw, Cursor)
+
+Add to your `claude_desktop_config.json` (or equivalent MCP config):
+
+```json
+{
+  "mcpServers": {
+    "enola-seo": {
+      "command": "uvx",
+      "args": ["--from", "git+https://github.com/sean1gal/enola-seo", "enola-seo-mcp"]
+    }
+  }
+}
+```
+
+Restart your client. ENOLA SEO appears as a tool set. Say "run the local quick start preset" and it goes.
+
+**Tools exposed:** `list_skills` · `load_skill` · `list_presets` · `load_preset` · `run_diagnostic` · `set_context` · `get_context`
+
+### Option B — Claude Code Skill (one-line install)
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/sean1gal/enola-seo/main/install.sh | bash
 ```
 
-### Manual install
+### Option C — Manual install
 
 ```bash
 # Copy the enola-seo/ folder into your Claude Code skills directory

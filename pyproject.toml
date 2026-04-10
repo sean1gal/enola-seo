@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "enola-seo-mcp"
+version = "1.0.0"
+description = "ENOLA SEO — 26-audit SEO system as an MCP server for Claude Desktop, OpenClaw, and Cursor"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Sean Gal", email = "sean1gal@gmail.com" }]
+keywords = ["seo", "mcp", "claude", "local-seo", "ai-search"]
+requires-python = ">=3.10"
+dependencies = ["mcp>=1.0.0"]
+
+[project.scripts]
+enola-seo-mcp = "enola_seo_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["mcp_server/enola_seo_mcp"]
+
+[tool.hatch.build]
+include = [
+  "mcp_server/",
+  "references/",
+  "presets/",
+  "README.md",
+  "LICENSE",
+]
